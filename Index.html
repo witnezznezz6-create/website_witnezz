@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>haii lauraa i,utt 😂</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    width:90%;
+    max-width:450px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation:muncul 2s;
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:scale(0.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+h1{
+    color:#ff4081;
+}
+
+p{
+    font-size:18px;
+    color:#333;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#ff4081;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e91e63;
+}
+
+#emoji{
+    font-size:60px;
+    animation:lompat 2s infinite;
+}
+
+@keyframes lompat{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div id="emoji">hi laura i,utt😛</div>
+
+    <h1>Selamat Datang di website witnezz ganteng!</h1>
+
+    <p id="pesan">
+        Ada yang bilang kamu pendek...
+        Tapi tenang, tinggi badan bukan ukuran hebatnya seseorang.
+    </p>
+
+    <button onclick="acakPesan()">Klik ini i,ut</button>
+</div>
+
+<script>
+let pesan = [
+"ohh iyaa kamu nga sibuk kan maaf yahh buang buang waktu kamu.",
+"🤣 Sedang mengukur tinggi badan...",
+"❌ Error! Tinggi belum ditemukan.",
+"😂 Yang penting semangatnya setinggi langit!",
+"😆 Pendek bukan berarti tidak cantikkk.",
+"😎 Orang hebat datang dalam berbagai ukuran.",
+"🎉 Tetap percaya diri dan terus tersenyum yah laura cantikk.",
+"segini aja duluu yahh laura cantik semoga suka hehe",
+"babayy lauraa i,utt😛.",
+
+];
+
+function acakPesan(){
+let angka = Math.floor(Math.random()*pesan.length);
+document.getElementById("pesan").innerHTML = pesan[angka];
+}
+</script>
+
+</body>
+</html>
